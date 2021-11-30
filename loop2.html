@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // break는 루프 한 개만 빠져나감
+        // var str;
+        // while (true){
+        //     str = prompt("입력해주세요.(q 종료)");
+        //     document.write(str + "<br>");
+        //     if(str === 'q'){
+        //         break;
+        //     }
+        // }
+        // document.write("Bye~");
+        
+        // continue는 반복문의 처음으로 돌아감
+        // for(var i = 0; i < 10; i++){
+        //     if (i === 5){
+        //         continue;
+        //     }
+        //     console.log(i);
+        // }
+
+        //이중루프
+        // for (var i = 0; i < 3; i++){
+        //     for (var j = 0; j < 2; j++){
+        //         console.log(i, j);
+        //     }
+        // }
+
+        //이중루프에서 break를 만나면 안쪽 루프만 빠져나감
+        for (var i = 0; i < 3; i++) {
+            for (var j = 0; j < 5; j++) {
+                if(j == 2){
+                    break;
+                }
+                console.log(i, j);
+            }
+        }
+    </script>
+</body>
+</html>

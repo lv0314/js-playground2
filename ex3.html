@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>1~10000의 소수 출력하기</h1>
+    <script>
+        numbers = {};
+        numbers.all = [];
+        numbers.prime = [];
+
+        //숫자 설정 함수
+        numbers.set = function(max_number){
+            for(var i = 1; i <= max_number; i++){
+                this.all.push(i);
+            };
+        };
+
+        //소수 판별 함수
+        numbers.isPrime = function(number){
+            if (number == 1){
+                    return false;
+                } else if (number == 2){
+                    return true;
+                }
+
+            for(var i = 2; i < number; i++){
+                if (number % i == 0){
+                    return false;
+                } 
+            }
+            return true;
+        }
+
+        //판별된 소수를 prime 배열에 넣는 함수
+        numbers.addPrime = function(){
+            for(var i = 0; i < this.all.length; i++){
+                var x = this.all[i];
+                if (this.isPrime(x)) {
+                    this.prime.push(x);
+                }
+            }
+        }
+
+        //구해진 소수를 화면에 띄워주는 함수
+        numbers.showAllPrimes = function(){
+            document.write("소수의 총 개수 : " + this.prime.length + "<br>")
+            for(var i = 0; i < this.prime.length; i++){
+                document.write(this.prime[i] + "<br>");
+            }
+        }
+
+        //실행함수
+        numbers.run = function(){
+            this.set(10000);
+            this.addPrime();
+            this.showAllPrimes();
+        };
+    </script>
+</body>
+</html>

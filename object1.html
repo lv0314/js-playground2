@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //객체 만들기
+        var p1 = {};
+
+        //속성 - 객체에 속한 변수
+        p1.name = "Hwan Kim";
+        console.log(p1.name);
+
+        //메소드 - 객체에 속한 함수
+        p1.eat = function(food){
+            console.log(food + "를 먹습니다.");
+        }
+
+        //객체 지향 프로그래밍
+
+        //this 키워드 - 메소드 안에서 사용 시 함수를 소유한 객체를 가리킴
+        var p2 = {};
+        p2.name = "crong";
+        p2.weight = 100;
+        p2.eat = function(food){
+            console.log(this.name +"이 "+ food + "를 먹었습니다.");
+            p2.weight += 1;
+        }
+
+        //객체 만들기2 - JSON 표기법
+        var m1 = {
+            "name" : "Hwan",
+            "hp" : 100,
+            "power" : 20,
+            "attack" : function(target){
+                target.hp -= this.power;
+            }
+        }
+    </script>
+</body>
+</html>

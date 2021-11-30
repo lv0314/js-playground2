@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //리턴 값이 있는 함수 정의
+        //리턴 값이 있을 경우 함수를 호출해서 변수에 값을 넣을 수 있음
+        var five = function(){
+            return 5;
+        };
+        var x = five();
+
+        //리턴 값이 없는 함수를 변수에 할당하면
+        var foo = function(){
+            console.log("I am foo");
+        }
+        var y = foo(); // undefined
+
+        //아무 값도 없는 리턴 사용하기
+        var test1 = function(text){
+            if (text === "exit"){
+                return;
+            }
+            console.log("보이나요?");
+        }
+        test1("abc");
+        test1("exit"); //함수를 끝내는 데 사용 break처럼
+
+        //이중루프 한 번에 빠져나가기
+        // for(var i = 0; i < 100; i++){
+        //     for(var j = 0; j < 100; j++){
+        //         console.log(i, j);
+        //     }
+        // }
+
+        //함수로 감싼 후 return으로 끝내면 됨
+        var foo = function(){
+            for(var i = 0; i < 100; i++){
+                for(var j = 0; j < 100; j++){
+                    console.log(i, j);
+                    if(i === 5 && j === 3){
+                        return;
+                    }
+                }
+            }
+        }   
+
+        foo();
+        </script>
+</body>
+</html>

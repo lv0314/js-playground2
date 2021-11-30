@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>M X N 단 출력하기</h1>
+    <script>
+        var inputN = [];
+
+        function input(){
+            var nums1 = prompt("첫 번째 수를 입력하세요");
+            inputN.push(nums1);
+
+            var nums2 = prompt("두 번째 수를 입력하세요");
+            inputN.push(nums2);
+        }
+
+        function trans1(){
+            var n1 = Number(inputN[0]);
+            return n1;
+        }
+
+        function trans2(){
+            var n2 = Number(inputN[1]);
+            return n2;
+        }
+
+        function calc(m,n){
+            for(var i = 2; i <= m; i++){
+                document.write("<h2>" + i +" X "+ n + "단</h2>")
+                for(var j = 1; j <= n; j++){
+                    document.write(i + " X " + j + " = " + (i * j) + "<br>");
+                }
+            }
+        }
+
+        function main(){
+            input();
+            calc(trans1(), trans2());
+        }
+
+        main();
+    </script>
+</body>
+</html>

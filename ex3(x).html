@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>1~10000의 소수 출력하기</h1>
+    <script>
+        numbers = {};
+        numbers.all = [];
+        numbers.prime = [];
+
+        numbers.isPrime = function(number){
+            for(i = 2; i < number; i++){
+                if(number % i != 0 ){
+                    return number;
+                } else {
+                    break;
+                }
+            }
+        }
+
+        numbers.addPrime = function(number){
+            var x = this.isPrime(number);
+            if (typeof(x) === 'number'){
+                this.prime.push(x);
+            }
+        }
+
+        numbers.getAllPrimes = function(){
+            document.write(this.prime);
+        }
+
+        numbers.addAll = function(max_num){
+            for (i = 1; i <= max_num; i++){
+                this.addPrime(i)
+            }
+        }
+    </script>
+</body>
+</html>

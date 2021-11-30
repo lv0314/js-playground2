@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //함수란
+        var foo = function(x){
+            var y = 2 * x + 3;
+            return y;
+        }
+        //foo 이름을 가진 x를 매개변수로하고 y를 리턴하는 함수
+        foo(2);
+        foo(3);
+
+        //함수 만들기1
+        var func1 = function(){
+            console.log("I am func1");
+        };
+        
+        //매개변수가 있는 함수 정의하기
+        var sayHi = function(name){
+            console.log("Hi, " + name);
+        }
+
+        var add = function(n1, n2){
+            console.log(n1 + " + " + n2 + " = " + ( n1+n2 ))
+        }
+
+        //예제
+        var repeat = function(text, num){
+            for(i = 0; i < num; i++){
+                console.log(text);
+            }
+        }
+    </script>
+</body>
+</html>
